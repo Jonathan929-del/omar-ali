@@ -1,6 +1,5 @@
 // Imports
 import {useState} from 'react'
-import Expenses from './Expenses'
 import styled from 'styled-components'
 import AllEmployees from './AllEmployees'
 import {VscPerson} from 'react-icons/vsc'
@@ -205,21 +204,16 @@ const InfoNum = styled.span`
 
 
 // Main Function
-const HomePage = () => {
+const HomePage = ({ExpensesOpener}) => {
 
   const [isAllEmployeesOpened, setIsAllEmployeesOpened] = useState(false);
-  const [isExpensesOpened, setIsExpensesOpened] = useState(false);
   const EmployeesOpener = () => {
     setIsAllEmployeesOpened(true);
-  }
-  const ExpensesOpener = () => {
-    setIsExpensesOpened(true);
   }
 
   return (
     <HomeContainer>
       {isAllEmployeesOpened && <AllEmployees setIsAllEmployeesOpened={setIsAllEmployeesOpened}/>}
-      {isExpensesOpened && <Expenses setIsExpensesOpened={setIsExpensesOpened}/>}
       <Boxes>
         <Box>
           <IconContainer>

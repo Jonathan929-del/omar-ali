@@ -1,5 +1,5 @@
 // Imports
-import React from 'react'
+import {useState} from 'react'
 import styled from 'styled-components'
 import {IoMdAddCircle} from 'react-icons/io'
 import {FaClipboardList} from 'react-icons/fa'
@@ -80,7 +80,8 @@ const Divider = styled.span`
 
 
 // Main Function
-const RightBar = ({title}) => {
+const RightBar = ({title, ExpensesOpener}) => {
+
   return (
     <RightbarContainer>
         <Header>
@@ -100,7 +101,7 @@ const RightBar = ({title}) => {
             <ListItem href='/employees' style={{color:title === 'Employees' ? '#367bf5' : '#5d6166'}}>
                 العمال<BsFillPersonFill style={{marginLeft:'10px', color:'#367bf5', fontSize:'20px'}}/>
             </ListItem>
-            <ListItem href='/payments' style={{color:title === 'Payments' ? '#367bf5' : '#5d6166'}}>
+            <ListItem style={{color:title === 'Payments' ? '#367bf5' : '#5d6166'}} onClick={ExpensesOpener}>
                 المصاريف<AiFillCreditCard style={{marginLeft:'10px', color:'#367bf5', fontSize:'20px'}}/>
             </ListItem>
             <ListItem href='/statistics' style={{color:title === 'Statistics' ? '#367bf5' : '#5d6166'}}>
