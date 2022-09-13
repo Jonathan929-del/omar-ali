@@ -108,7 +108,7 @@ const RightBar = ({title, ExpensesOpener}) => {
                 الاحصائيات<SiGoogleanalytics style={{marginLeft:'10px', color:'#367bf5', fontSize:'20px'}}/>
             </ListItem>
             <Divider>-</Divider>
-            <ListItem href='/logout' style={{color:'#5d6166'}}>
+            <ListItem style={{color:'#5d6166'}}>
                 تسجيل الخروج<AiFillQuestionCircle style={{marginLeft:'10px', color:'#ccc', fontSize:'20px'}}/>
             </ListItem>
         </List>
