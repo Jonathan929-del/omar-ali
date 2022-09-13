@@ -1,6 +1,8 @@
 // Imports
-import React from 'react'
+import {useState} from 'react'
+import Expenses from './Expenses'
 import styled from 'styled-components'
+import AllEmployees from './AllEmployees'
 import {VscPerson} from 'react-icons/vsc'
 import {IoMdAddCircle} from 'react-icons/io'
 import {AiFillCreditCard} from 'react-icons/ai'
@@ -204,8 +206,20 @@ const InfoNum = styled.span`
 
 // Main Function
 const HomePage = () => {
+
+  const [isAllEmployeesOpened, setIsAllEmployeesOpened] = useState(false);
+  const [isExpensesOpened, setIsExpensesOpened] = useState(false);
+  const EmployeesOpener = () => {
+    setIsAllEmployeesOpened(true);
+  }
+  const ExpensesOpener = () => {
+    setIsExpensesOpened(true);
+  }
+
   return (
     <HomeContainer>
+      {isAllEmployeesOpened && <AllEmployees setIsAllEmployeesOpened={setIsAllEmployeesOpened}/>}
+      {isExpensesOpened && <Expenses setIsExpensesOpened={setIsExpensesOpened}/>}
       <Boxes>
         <Box>
           <IconContainer>
@@ -216,7 +230,7 @@ const HomePage = () => {
             <Number>$5,174</Number>
           </Text>
         </Box>
-        <Box>
+        <Box onClick={EmployeesOpener}>
           <IconContainer>
             <VscPerson style={{backgroundColor:'transparent'}}/>
           </IconContainer>
@@ -225,7 +239,7 @@ const HomePage = () => {
             <Number>104</Number>
           </Text>
         </Box>
-        <Box>
+        <Box onClick={ExpensesOpener}>
           <IconContainer>
             <AiFillCreditCard style={{backgroundColor:'transparent'}}/>
           </IconContainer>

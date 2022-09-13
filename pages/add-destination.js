@@ -1,11 +1,11 @@
 // Imports
 import Head from 'next/head'
 import RightBar from '../Components/RightBar'
-import DestinationsPage from '../Components/DestinationsPage'
+import AddDestinationsPage from '../Components/AddDestinationsPage'
 
 
 // Main Function
-const Destinations = () => {
+const AddDestinations = () => {
   return (
     <div>
       <Head>
@@ -14,11 +14,11 @@ const Destinations = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <RightBar title='Destinations'/>
-      <DestinationsPage />
+      <AddDestinationsPage />
     </div>
   )
 }
 
 
 // Export
-export default Destinations;
+export default AddDestinations;

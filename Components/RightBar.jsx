@@ -4,8 +4,8 @@ import styled from 'styled-components'
 import {IoMdAddCircle} from 'react-icons/io'
 import {FaClipboardList} from 'react-icons/fa'
 import {SiGoogleanalytics} from 'react-icons/si'
-import {AiFillCreditCard, AiFillQuestionCircle} from 'react-icons/ai'
 import {BsFillGrid1X2Fill, BsFillPersonFill} from 'react-icons/bs'
+import {AiFillCreditCard, AiFillQuestionCircle} from 'react-icons/ai'
 
 
 
@@ -16,7 +16,7 @@ const RightbarContainer = styled.aside`
     height:100%;
     position:fixed;
     min-width:300px;
-    background-color:#ffffff;
+    background-color:#fff;
 `
 const Header = styled.div`
     display:flex;
@@ -41,7 +41,7 @@ const List = styled.ul`
     flex-direction:column;
     background-color:transparent;
 `
-const FirstListItem = styled.li`
+const FirstListItem = styled.a`
     width:70%;
     padding:10px;
     display:flex;
@@ -52,6 +52,7 @@ const FirstListItem = styled.li`
     align-items:center;
     border-radius:20px;
     margin:40px 0 60px 0;
+    text-decoration:none;
     justify-content:center;
     background-color:#fff;
     box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
@@ -84,10 +85,10 @@ const RightBar = ({title}) => {
     <RightbarContainer>
         <Header>
             <Img src='./Images/Logo.png' alt='Logo'/>
-            <Title>OMAR ALI</Title>
+            <Title>ALI OMAR</Title>
         </Header>
         <List>
-            <FirstListItem>
+            <FirstListItem href='/add-destination'>
                 اضافة موقف<IoMdAddCircle style={{fontSize:'20px', marginLeft:'10px'}}/>
             </FirstListItem>
             <ListItem href='/' style={{color:title === 'Main Page' ? '#367bf5' : '#5d6166'}}>

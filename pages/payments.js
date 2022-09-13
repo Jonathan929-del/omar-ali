@@ -8,8 +8,8 @@ const Payments = () => {
   return (
     <div>
       <Head>
-        <title>Omar Ali - Payments</title>
-        <meta name="description" content="Omar Ali - Payments" />
+        <title>Ali Omar - Payments</title>
+        <meta name="description" content="Ali Omar - Payments" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <RightBar title='Payments'/>
