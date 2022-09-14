@@ -50,10 +50,10 @@ export const data = {
   labels,
   datasets: [
     {
-      label: 'Dataset 1',
-      data: labels.map(() => Math.floor(Math.random() * 1000)),
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      label: '$100000',
+      data:labels.map(() => Math.floor(Math.random() * 100000)),
+      borderColor: '#6691fc',
+      backgroundColor: '#6691fc',
       yAxisID: 'y',
     }
   ],

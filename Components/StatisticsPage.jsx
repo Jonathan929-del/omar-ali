@@ -8,12 +8,12 @@ import {LineChartCom} from './LineChartCom'
 import {FaClipboardList} from 'react-icons/fa'
 import {MdOutlineAttachMoney} from 'react-icons/md'
 import {LineChartComTwo} from './LineChartComTwo'
+import CalendarCom from './CalendarCom'
 
 
 
 // Styles
 const StatisticsContainer = styled.section`
-    height:100vh;
     display:flex;
     padding:20px 0;
     align-items:center;
@@ -94,10 +94,10 @@ const TopSectionRightBox = styled.div`
   box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
 `
 const MiddleSection = styled.div`
-  
   width:100%;
   display:flex;
   padding:0 50px;
+  margin-top:20px;
   align-items:center;
   justify-content:space-between;
 `
@@ -138,8 +138,8 @@ const Paragraph = styled.p`
   background-color:transparent;
 `
 const Number = styled.p`
-  color:#367bf5;
   font-size:23px;
+  color:#367bf5;
   margin-top:20px;
   background-color:transparent;
 `
@@ -147,6 +147,7 @@ const BottomSection = styled.div`
   width:100%;
   display:flex;
   padding:0 50px;
+  margin-top:50px;
   align-items:center;
   justify-content:space-between;
 `
@@ -184,7 +185,9 @@ const StatisticsPage = () => {
               <DoughtnutCom />
             </TopSectionLeftBoxBottom>
           </TopSectionLeftBox>
-          <TopSectionRightBox></TopSectionRightBox>
+          <TopSectionRightBox>
+            <CalendarCom />
+          </TopSectionRightBox>
         </TopSection>
         <MiddleSection>
           <Box>
